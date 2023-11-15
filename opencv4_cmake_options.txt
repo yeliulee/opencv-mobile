@@ -83,5 +83,5 @@
 -DBUILD_opencv_calib3d=OFF
 -DBUILD_opencv_flann=OFF
 -DBUILD_opencv_objdetect=OFF
--DBUILD_opencv_stitching=OFF
+-DBUILD_opencv_stitching=ON
 -DBUILD_opencv_ml=OFF
