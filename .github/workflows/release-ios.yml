@@ -3,7 +3,7 @@ on: [push]
 
 env:
   DEVELOPER_DIR: /Applications/Xcode_13.4.1.app/Contents/Developer
-  IOS_DEPLOYMENT_TARGET: "11.0"
+  IOS_DEPLOYMENT_TARGET: "9.0"
   MAC_DEPLOYMENT_TARGET: "10.9"
   MAC_ARM64_DEPLOYMENT_TARGET: "11.0"
   MAC_CATALYST_DEPLOYMENT_TARGET: "13.1"
@@ -23,6 +23,8 @@ jobs:
       PACKAGENAME: opencv-mobile-4.8.1-ios
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: "build-ios"
       - name: opencv-source
         run: |
           wget -q https://github.com/opencv/opencv/archive/${{ env.OPENCV_VERSION }}.zip -O opencv-${{ env.OPENCV_VERSION }}.zip
