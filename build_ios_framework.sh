@@ -3,10 +3,10 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
 export OPENCV_VERSION="4.8.1"
 export PACKAGENAME="opencv-mobile-4.8.1-ios"
-export IOS_DEPLOYMENT_TARGET="9.0"
-export ENABLE_BITCODE="OFF"
-export ENABLE_ARC="OFF"
-export ENABLE_VISIBILITY="OFF"
+export IOS_DEPLOYMENT_TARGET=9.0
+export ENABLE_BITCODE=OFF
+export ENABLE_ARC=OFF
+export ENABLE_VISIBILITY=OFF
 
 
 
