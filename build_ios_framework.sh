@@ -10,18 +10,20 @@ export ENABLE_VISIBILITY="OFF"
 
 
 
-# cd $SCRIPT_DIR
+cd $SCRIPT_DIR
 
-# wget -q https://github.com/opencv/opencv/archive/$OPENCV_VERSION.zip -O opencv-$OPENCV_VERSION.zip
-# unzip -q opencv-$OPENCV_VERSION.zip
-# cd opencv-$OPENCV_VERSION
-# echo -n > cmake/OpenCVFindLibsGrfmt.cmake
-# rm -rf modules/gapi
-# patch -p1 -i ../opencv-4.8.1-no-rtti.patch
-# patch -p1 -i ../opencv-4.8.1-no-zlib.patch
-# patch -p1 -i ../opencv-4.8.1-link-openmp.patch
-# rm -rf modules/highgui
-# cp -r ../highgui modules/
+wget -q https://github.com/opencv/opencv/archive/$OPENCV_VERSION.zip -O opencv-$OPENCV_VERSION.zip
+unzip -q opencv-$OPENCV_VERSION.zip
+cd opencv-$OPENCV_VERSION
+echo -n > cmake/OpenCVFindLibsGrfmt.cmake
+rm -rf modules/gapi
+patch -p1 -i ../opencv-4.8.1-no-rtti.patch
+patch -p1 -i ../opencv-4.8.1-no-zlib.patch
+patch -p1 -i ../opencv-4.8.1-link-openmp.patch
+rm -rf modules/highgui
+cp -r ../highgui modules/
+
+cd $SCRIPT_DIR
 
 ## build
 
